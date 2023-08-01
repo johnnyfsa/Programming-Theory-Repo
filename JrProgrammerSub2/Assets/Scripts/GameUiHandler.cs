@@ -9,6 +9,7 @@ public class GameUiHandler : MonoBehaviour
     [SerializeField] Text dogSpeech;
     public string Dogspeech
     {
+        //ENCAPSULATION
         get { return dogSpeech.text; }
         set { dogSpeech.text = value; }
     }

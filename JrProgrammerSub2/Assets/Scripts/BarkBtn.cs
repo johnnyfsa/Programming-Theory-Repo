@@ -12,6 +12,7 @@ public class BarkBtn : MonoBehaviour
         if (GameManager.Instance.SelectedDog) 
         {
             dogBehaviour  = GameManager.Instance.SelectedDog.GetComponent<Dog>();
+            //POLYMORPHISM
             gameUiHandler.Dogspeech = dogBehaviour.Bark();
         }
         

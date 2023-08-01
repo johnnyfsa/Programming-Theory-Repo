@@ -10,16 +10,22 @@ public class SelectDog : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) 
         {
             print("clicked :" + gameObject.name);
-            GameManager.Instance.SelectedDogBreed = gameObject.name;
-            string dog = GameManager.Instance.SelectedDogBreed;
-            for (int i = 0; i < GameManager.Instance.Dogs.Count; i++)
-            {
-                if (dog == GameManager.Instance.Dogs[i].name)
-                { 
-                    GameManager.Instance.SelectedDog = GameManager.Instance.Dogs[i];
-                }
-            }
+            //ABSTRACTION
+            DogSelection();
             SceneManager.LoadScene(0);
+        }
+    }
+
+    private void DogSelection() 
+    {
+        GameManager.Instance.SelectedDogBreed = gameObject.name;
+        string dog = GameManager.Instance.SelectedDogBreed;
+        for (int i = 0; i < GameManager.Instance.Dogs.Count; i++)
+        {
+            if (dog == GameManager.Instance.Dogs[i].name)
+            {
+                GameManager.Instance.SelectedDog = GameManager.Instance.Dogs[i];
+            }
         }
     }
 }

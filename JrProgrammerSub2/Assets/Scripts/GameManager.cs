@@ -11,18 +11,21 @@ public class GameManager : MonoBehaviour
 
     public GameObject SelectedDog 
     {
+        //ENCAPSULATION
         get { return selectedDog; }
         set { selectedDog = value; }
     }
 
     public List<GameObject> Dogs 
     {
+        //ENCAPSULATION
         get { return dogs; }
         set { dogs = value; }
     }
 
     public string SelectedDogBreed 
-    { 
+    {
+        //ENCAPSULATION
         get { return selectedDogBreed; } 
         set { selectedDogBreed = value; } 
     }
