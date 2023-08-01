@@ -6,6 +6,21 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     [SerializeField] string selectedDogBreed;
+    [SerializeField] List<GameObject> dogs;
+    [SerializeField] GameObject selectedDog;
+
+    public GameObject SelectedDog 
+    {
+        get { return selectedDog; }
+        set { selectedDog = value; }
+    }
+
+    public List<GameObject> Dogs 
+    {
+        get { return dogs; }
+        set { dogs = value; }
+    }
+
     public string SelectedDogBreed 
     { 
         get { return selectedDogBreed; } 
